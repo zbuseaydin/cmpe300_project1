@@ -59,8 +59,7 @@ def run(input):
         start = time.time()
         arr2 = function(arr)
         time_executed = (time.time()-start)
-        tmp[1].append([time_executed*2e7, size])
-    print(tmp[1])
+        tmp[1].append([time_executed, size])
 
 def print_all():
     tmp = f"Case: %s Size: %d Elapsed Time: %f"
@@ -70,3 +69,9 @@ def print_all():
         print(tmp%("average", i[1], i[0]))
     for i in worst_times:
         print(tmp%("worst", i[1], i[0]))
+
+
+run(best_case_input)
+run(worst_case_input)
+run(average_case_input)
+print_all()
